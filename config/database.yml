@@ -1,0 +1,18 @@
+connection: &connection
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: 78527232
+
+development:
+  <<: *connection
+  database: caioservicesapi_development
+
+test:
+  <<: *connection
+  database: caioservicesapi_test
+
+production:
+  <<: *connection
+  database: caioservicesapi_production
